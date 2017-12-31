@@ -265,7 +265,8 @@ export default class MediaGallery extends React.PureComponent {
     }
 
     return (
-      <div className='media-gallery' style={style}>
+      // <div className='media-gallery' style={style}>
+      <div className='media-gallery'>
         <div className={classNames('spoiler-button', { 'spoiler-button--visible': visible })}>
           <IconButton title={intl.formatMessage(messages.toggle_visible)} icon={visible ? 'eye' : 'eye-slash'} overlay onClick={this.handleOpen} />
         </div>
