@@ -1642,7 +1642,9 @@
 }
 
 .column {
-  width: 330px;
+  margin: 0 auto;
+  // width: 330px;
+  max-width: 600px;
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -1663,7 +1665,8 @@
 }
 
 .drawer {
-  width: 300px;
+  margin: 0 auto;
+  width: 600px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -1681,9 +1684,13 @@
   border-bottom: 2px solid transparent;
 }
 
-.column,
-.drawer {
+.column{
   flex: 1 1 100%;
+  overflow: hidden;
+}
+
+.drawer {
+  // flex: 1 1 100%;
   overflow: hidden;
 }
 
@@ -1715,35 +1722,35 @@
   }
 }
 
-@media screen and (min-width: 631px) {
-  .columns-area {
-    padding: 0;
-  }
-
-  .column,
-  .drawer {
-    flex: 0 0 auto;
-    padding: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-
-    &:first-child {
-      padding-left: 10px;
-    }
-
-    &:last-child {
-      padding-right: 10px;
-    }
-  }
-
-  .columns-area > div {
-    .column,
-    .drawer {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-  }
-}
+// @media screen and (min-width: 631px) {
+//   .columns-area {
+//     padding: 0;
+//   }
+//
+//   .column,
+//   .drawer {
+//     flex: 0 0 auto;
+//     padding: 10px;
+//     padding-left: 5px;
+//     padding-right: 5px;
+//
+//     &:first-child {
+//       padding-left: 10px;
+//     }
+//
+//     &:last-child {
+//       padding-right: 10px;
+//     }
+//   }
+//
+//   .columns-area > div {
+//     .column,
+//     .drawer {
+//       padding-left: 5px;
+//       padding-right: 5px;
+//     }
+//   }
+// }
 
 .drawer__pager {
   box-sizing: border-box;
@@ -1803,6 +1810,9 @@
 }
 
 .tabs-bar {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
   display: flex;
   background: lighten($ui-base-color, 8%);
   flex: 0 0 auto;
@@ -1854,11 +1864,11 @@
   }
 }
 
-@media screen and (min-width: 631px) {
-  .tabs-bar {
-    display: none;
-  }
-}
+// @media screen and (min-width: 631px) {
+//   .tabs-bar {
+//     display: none;
+//   }
+// }
 
 .scrollable {
   overflow-y: scroll;

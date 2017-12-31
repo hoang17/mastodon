@@ -377,7 +377,8 @@ export default class UI extends React.Component {
         <div className='ui' ref={this.setRef}>
           <TabsBar />
 
-          <ColumnsAreaContainer ref={this.setColumnsAreaRef} singleColumn={isMobile(width)}>
+          {/* <ColumnsAreaContainer ref={this.setColumnsAreaRef} singleColumn={isMobile(width)}> */}
+          <ColumnsAreaContainer ref={this.setColumnsAreaRef} singleColumn={true}>
             <WrappedSwitch>
               <Redirect from='/' to='/getting-started' exact />
               <WrappedRoute path='/getting-started' component={GettingStarted} content={children} />
