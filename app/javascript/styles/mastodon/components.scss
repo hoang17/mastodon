@@ -3928,10 +3928,10 @@
 .media-gallery__item-gifv-thumbnail {
   cursor: zoom-in;
   height: 100%;
-  object-fit: cover;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  // object-fit: cover;
+  // position: relative;
+  // top: 50%;
+  // transform: translateY(-50%);
   width: 100%;
   z-index: 1;
 }
@@ -3956,10 +3956,10 @@
 
 .status__video-player-video {
   height: 100%;
-  object-fit: cover;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  // object-fit: cover;
+  // position: relative;
+  // top: 50%;
+  // transform: translateY(-50%);
   width: 100%;
   z-index: 1;
 }
