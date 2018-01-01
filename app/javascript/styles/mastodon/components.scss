@@ -1606,19 +1606,19 @@
   }
 }
 
-.columns-area {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: row;
-  justify-content: flex-start;
-  overflow-x: auto;
-  position: relative;
-}
+// .columns-area {
+//   display: flex;
+//   flex: 1 1 auto;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   overflow-x: auto;
+//   position: relative;
+// }
 
 @media screen and (min-width: 360px) {
-  .columns-area {
-    padding: 10px;
-  }
+  // .columns-area {
+  //   padding: 10px;
+  // }
 
   .react-swipeable-view-container .columns-area {
     height: calc(100% - 20px) !important;
@@ -1643,8 +1643,8 @@
 
 .column {
   margin: 0 auto;
-  // width: 330px;
   max-width: 600px;
+  // width: 330px;
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -1661,16 +1661,16 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: darken($ui-base-color, 7%);
+  // background: darken($ui-base-color, 7%);
 }
 
 .drawer {
   margin: 0 auto;
   width: 600px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  overflow-y: hidden;
+  // box-sizing: border-box;
+  // display: flex;
+  // flex-direction: column;
+  // overflow-y: hidden;
 }
 
 .drawer__tab {
@@ -1684,15 +1684,15 @@
   border-bottom: 2px solid transparent;
 }
 
-.column{
-  flex: 1 1 100%;
-  overflow: hidden;
-}
+// .column{
+//   flex: 1 1 100%;
+//   overflow: hidden;
+// }
 
-.drawer {
-  // flex: 1 1 100%;
-  overflow: hidden;
-}
+// .drawer {
+//   flex: 1 1 100%;
+//   overflow: hidden;
+// }
 
 @media screen and (min-width: 360px) {
   .tabs-bar {
@@ -1753,27 +1753,27 @@
 // }
 
 .drawer__pager {
-  box-sizing: border-box;
-  padding: 0;
-  flex-grow: 1;
+  // box-sizing: border-box;
+  // padding: 0;
+  // flex-grow: 1;
   position: relative;
-  overflow: hidden;
-  display: flex;
+  // overflow: hidden;
+  // display: flex;
 }
 
 .drawer__inner {
-  position: absolute;
-  top: 0;
-  left: 0;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
   background: lighten($ui-base-color, 13%) url('../images/wave-drawer.png') no-repeat bottom / 100% auto;
-  box-sizing: border-box;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  overflow-y: auto;
-  width: 100%;
-  height: 100%;
+  // box-sizing: border-box;
+  // padding: 0;
+  // display: flex;
+  // flex-direction: column;
+  // overflow: hidden;
+  // overflow-y: auto;
+  // width: 100%;
+  // height: 100%;
 
   &.darker {
     background: $ui-base-color;
@@ -1870,27 +1870,27 @@
 //   }
 // }
 
-.scrollable {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  flex: 1 1 auto;
-  -webkit-overflow-scrolling: touch;
-  will-change: transform; // improves perf in mobile Chrome
+// .scrollable {
+//   overflow-y: scroll;
+//   overflow-x: hidden;
+//   flex: 1 1 auto;
+//   -webkit-overflow-scrolling: touch;
+//   will-change: transform; // improves perf in mobile Chrome
+//
+//   &.optionally-scrollable {
+//     overflow-y: auto;
+//   }
+//
+//   @supports(display: grid) { // hack to fix Chrome <57
+//     contain: strict;
+//   }
+// }
 
-  &.optionally-scrollable {
-    overflow-y: auto;
-  }
-
-  @supports(display: grid) { // hack to fix Chrome <57
-    contain: strict;
-  }
-}
-
-.scrollable.fullscreen {
-  @supports(display: grid) { // hack to fix Chrome <57
-    contain: none;
-  }
-}
+// .scrollable.fullscreen {
+//   @supports(display: grid) { // hack to fix Chrome <57
+//     contain: none;
+//   }
+// }
 
 .column-back-button {
   background: lighten($ui-base-color, 4%);
@@ -2082,10 +2082,10 @@
   cursor: default;
 }
 
-.getting-started__wrapper {
-  position: relative;
-  overflow-y: auto;
-}
+// .getting-started__wrapper {
+//   position: relative;
+//   overflow-y: auto;
+// }
 
 .getting-started {
   background: $ui-base-color;
@@ -2324,8 +2324,8 @@
 }
 
 .column-header__wrapper {
-  position: relative;
-  flex: 0 0 auto;
+  // position: relative;
+  // flex: 0 0 auto;
 
   &.active {
     &::before {

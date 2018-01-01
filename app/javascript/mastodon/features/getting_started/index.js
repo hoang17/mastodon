@@ -83,7 +83,8 @@ export default class GettingStarted extends ImmutablePureComponent {
       <ColumnLink key='9' icon='ban' text={intl.formatMessage(messages.blocks)} to='/blocks' />,
     ]);
 
-    if (multiColumn) {
+    // if (multiColumn) {
+    if (true) {
       navItems.push(<ColumnLink key='10' icon='question' text={intl.formatMessage(messages.keyboard_shortcuts)} to='/keyboard-shortcuts' />);
     }
 

@@ -5,7 +5,7 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import ImmutablePureComponent from 'react-immutable-pure-component';
 
 import ReactSwipeableViews from 'react-swipeable-views';
-import { links, getIndex, getLink } from './tabs_bar';
+import { alink as links, getIndex, getLink } from './tabs_bar';
 
 import BundleContainer from '../containers/bundle_container';
 import ColumnLoading from './column_loading';
@@ -125,8 +125,7 @@ export default class ColumnsArea extends ImmutablePureComponent {
     const icon = link.props['data-preview-icon'];
 
     const view = (index === columnIndex) ?
-      React.cloneElement(this.props.children) :
-      <ColumnLoading title={title} icon={icon} />;
+      React.cloneElement(this.props.children) : <ColumnLoading title={title} icon={icon} />;
 
     return (
       <div className='columns-area' key={index}>
@@ -150,29 +149,32 @@ export default class ColumnsArea extends ImmutablePureComponent {
     const columnIndex = getIndex(this.context.router.history.location.pathname);
     this.pendingIndex = null;
 
-    if (singleColumn) {
-      return columnIndex !== -1 ? (
-        <ReactSwipeableViews index={columnIndex} onChangeIndex={this.handleSwipe} onTransitionEnd={this.handleAnimationEnd} animateTransitions={shouldAnimate} springConfig={{ duration: '400ms', delay: '0s', easeFunction: 'ease' }} style={{ height: '100%' }}>
-          {links.map(this.renderView)}
-        </ReactSwipeableViews>
-      ) : <div className='columns-area'>{children}</div>;
-    }
+    return columnIndex !== -1 ?
+      links.map(this.renderView) : <div className='columns-area'>{children}</div>;
 
-    return (
-      <div className='columns-area' ref={this.setRef}>
-        {columns.map(column => {
-          const params = column.get('params', null) === null ? null : column.get('params').toJS();
+    // if (singleColumn) {
+    //   return columnIndex !== -1 ? (
+    //     <ReactSwipeableViews index={columnIndex} onChangeIndex={this.handleSwipe} onTransitionEnd={this.handleAnimationEnd} animateTransitions={shouldAnimate} springConfig={{ duration: '400ms', delay: '0s', easeFunction: 'ease' }} style={{ height: '100%' }}>
+    //       {links.map(this.renderView)}
+    //     </ReactSwipeableViews>
+    //   ) : <div className='columns-area'>{children}</div>;
+    // }
 
-          return (
-            <BundleContainer key={column.get('uuid')} fetchComponent={componentMap[column.get('id')]} loading={this.renderLoading(column.get('id'))} error={this.renderError}>
-              {SpecificComponent => <SpecificComponent columnId={column.get('uuid')} params={params} multiColumn />}
-            </BundleContainer>
-          );
-        })}
-
-        {React.Children.map(children, child => React.cloneElement(child, { multiColumn: true }))}
-      </div>
-    );
+    // return (
+    //   <div className='columns-area' ref={this.setRef}>
+    //     {columns.map(column => {
+    //       const params = column.get('params', null) === null ? null : column.get('params').toJS();
+    //
+    //       return (
+    //         <BundleContainer key={column.get('uuid')} fetchComponent={componentMap[column.get('id')]} loading={this.renderLoading(column.get('id'))} error={this.renderError}>
+    //           {SpecificComponent => <SpecificComponent columnId={column.get('uuid')} params={params} multiColumn />}
+    //         </BundleContainer>
+    //       );
+    //     })}
+    //
+    //     {React.Children.map(children, child => React.cloneElement(child, { multiColumn: true }))}
+    //   </div>
+    // );
   }
 
 }
